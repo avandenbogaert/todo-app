@@ -23,7 +23,7 @@ $ php bin/console doctrine:fixtures:load
 Install the frontend application by executing the following commands
 
 ```shell script
-$ npm install && npm run watch
+$ npm install && npm run dev
 ```
 
 ### Starting the application

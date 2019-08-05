@@ -32,7 +32,7 @@ abstract class FunctionalTestCase extends WebTestCase
 
     public function assertResponseContainsItems(array $data): void
     {
-        foreach($data as $responseData) {
+        foreach ($data as $responseData) {
             $this->assertDataIsItem($responseData);
         }
     }
