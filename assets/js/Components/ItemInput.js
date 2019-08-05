@@ -1,7 +1,7 @@
 import React from 'react';
 import Form from "react-bootstrap/Form";
 
-class ItemForm extends React.Component {
+class ItemInput extends React.Component {
     constructor(props) {
         super(props);
         this.onSubmit = this.onSubmit.bind(this);
@@ -13,7 +13,7 @@ class ItemForm extends React.Component {
 
     onSubmit(event) {
         event.preventDefault();
-        this.props.addItem(this.refs.itemName.value);
+        this.props.onSubmit(this.refs.itemName.value);
         this.refs.form.reset();
     }
 
@@ -36,4 +36,4 @@ class ItemForm extends React.Component {
     }
 }
 
-export default ItemForm;
+export default ItemInput;

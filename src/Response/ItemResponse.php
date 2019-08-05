@@ -10,8 +10,6 @@ class ItemResponse extends JsonResponse
 {
     public function __construct(Item $item, int $statusCode = 200)
     {
-        parent::__construct($item, $statusCode, [
-            'Access-Control-Allow-Origin' => '*'
-        ]);
+        parent::__construct($item, $statusCode);
     }
 }

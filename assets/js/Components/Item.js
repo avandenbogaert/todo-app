@@ -2,7 +2,7 @@ import React from 'react';
 import ListGroupItem from "react-bootstrap/ListGroupItem";
 import {FaCheck, FaTrash, FaUndo} from "react-icons/fa";
 
-class TodoItem extends React.Component {
+class Item extends React.Component {
     constructor(props) {
         super(props);
 
@@ -41,4 +41,4 @@ class TodoItem extends React.Component {
     }
 }
 
-export default TodoItem
+export default Item

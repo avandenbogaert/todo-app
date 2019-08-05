@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controller;
 
 use App\Manager\ItemManager;
+use App\Response\SuccessResponse;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
 class DeleteController
@@ -22,6 +23,6 @@ class DeleteController
     {
         $this->manager->delete($uuid);
 
-        return new JsonResponse(['success'], 201, ['Access-Control-Allow-Origin' => '*']);
+        return new SuccessResponse;
     }
 }

@@ -28,6 +28,6 @@ class CreateController
 
         $this->manager->save($item);
 
-        return new ItemResponse($item);
+        return new ItemResponse($item, 201);
     }
 }

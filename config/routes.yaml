@@ -3,37 +3,38 @@ index:
   controller: App\Controller\IndexController
 
 list:
-  path: /list
+  path: /items
   controller: App\Controller\ListController
+  methods: GET
   defaults:
     _format: json
 
 create:
-  path: /create
+  path: /item/create
   controller: App\Controller\CreateController
   methods: POST
   defaults:
     _format: json
 
 delete:
-  path: /{uuid}/delete
+  path: /item/{uuid}/delete
   controller: App\Controller\DeleteController
-  methods: POST
+  methods: DELETE
   defaults:
     _format: json
 
 check:
-  path: /{uuid}/check
+  path: /item/{uuid}/check
   controller: App\Controller\CheckController
-  methods: POST
+  methods: PATCH
   defaults:
     isChecked: true
     _format: json
 
 uncheck:
-  path: /{uuid}/uncheck
+  path: /item/{uuid}/uncheck
   controller: App\Controller\CheckController
-  methods: POST
+  methods: PATCH
   defaults:
     isChecked: false
     _format: json

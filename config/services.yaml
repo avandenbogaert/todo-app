@@ -6,31 +6,6 @@ services:
         autowire: false
         autoconfigure: false
 
-    App\Controller\IndexController:
-        arguments:
-            $renderer: '@templating.engine.twig'
-        public: true
-
-    App\Controller\CreateController:
-        arguments:
-            $manager: '@App\Manager\ItemManager'
-        public: true
-
-    App\Controller\ListController:
-        arguments:
-            $manager: '@App\Manager\ItemManager'
-        public: true
-
-    App\Controller\CheckController:
-        arguments:
-            $manager: '@App\Manager\ItemManager'
-        public: true
-
-    App\Controller\DeleteController:
-        arguments:
-            $manager: '@App\Manager\ItemManager'
-        public: true
-
     App\Repository\ItemRepository:
         factory: ['@doctrine.orm.default_entity_manager', 'getRepository']
         arguments:
