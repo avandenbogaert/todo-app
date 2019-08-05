@@ -8,7 +8,7 @@ use JsonSerializable;
 use Ramsey\Uuid\Uuid;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ItemRepository")
+ * @ORM\Entity
  */
 class Item implements JsonSerializable
 {
@@ -45,7 +45,7 @@ class Item implements JsonSerializable
     {
         $this->content = $content;
         $this->checked = $checked;
-        $this->uuid = Uuid::uuid4();
+        $this->uuid = (string)Uuid::uuid4();
     }
 
     public function check(): void

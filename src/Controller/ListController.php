@@ -21,6 +21,6 @@ class ListController
 
     public function __invoke(): JsonResponse
     {
-        return new ItemsResponse(...$this->manager->fetchAll());
+        return new ItemsResponse(...$this->manager->findAll());
     }
 }
