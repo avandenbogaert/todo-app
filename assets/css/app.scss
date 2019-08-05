@@ -1,0 +1,83 @@
+@import '~bootstrap';
+
+/** variables **/
+$spacing: 25px;
+$container-width: 1024px;
+$app-width: 800px;
+
+/** app specific styling **/
+#todo-app {
+  .container {
+    width: $container-width;
+    text-align: left;
+    padding: $spacing;
+    margin: $spacing auto 0;
+    background-color: white;
+  }
+
+  h1 {
+    margin: $spacing 0 $spacing 0;
+    text-align: center;
+  }
+
+  .todo-item-form-wrapper {
+    width: $app-width;
+    margin: 0 auto;
+    text-align: center;
+
+    .todo-item-form {
+      display: inline-block;
+    }
+  }
+
+  .form-group {
+    margin: 5px;
+  }
+
+  .todo-list {
+    margin-top: $spacing;
+
+    .todo-item {
+
+      .btn {
+        display: block;
+        float: right;
+        margin-right: 5px;
+      }
+
+      .btn:hover {
+        cursor: pointer;
+      }
+    }
+
+    .todo-item.list-group-item-light {
+      text-decoration: line-through;
+    }
+  }
+
+  .alert {
+    margin-top: 25px;
+  }
+
+  .loader {
+    text-align: center;
+    margin-top: 25px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  height: 100%;
+  background-color: darkgray;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}

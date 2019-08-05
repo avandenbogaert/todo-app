@@ -1,0 +1,39 @@
+index:
+  path: /
+  controller: App\Controller\IndexController
+
+list:
+  path: /list
+  controller: App\Controller\ListController
+  defaults:
+    _format: json
+
+create:
+  path: /create
+  controller: App\Controller\CreateController
+  methods: POST
+  defaults:
+    _format: json
+
+delete:
+  path: /{uuid}/delete
+  controller: App\Controller\DeleteController
+  methods: POST
+  defaults:
+    _format: json
+
+check:
+  path: /{uuid}/check
+  controller: App\Controller\CheckController
+  methods: POST
+  defaults:
+    isChecked: true
+    _format: json
+
+uncheck:
+  path: /{uuid}/uncheck
+  controller: App\Controller\CheckController
+  methods: POST
+  defaults:
+    isChecked: false
+    _format: json
